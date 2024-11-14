@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./logo2.png" style="height: 100px; width: 100px;">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -40,26 +40,44 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="./logo.png" alt="">
-        <h1 class="sitename">QuickSite Builder</h1>
-      </a>
+          <div class="col-lg-5">
+            <a href="index.html" class="d-flex align-items-center me-auto">
+              <img src="./logo2.png" style="height: 100px; width: auto;" alt="">
+              <h1 class="sitename"> <span style="color: rgb(95, 164, 253);"> QuickSite</span> <span
+                  class="me">Builder</span>
+              </h1>
+            </a>
+            <style>
+              .me {
+                color: transparent;
+                -webkit-text-stroke: 1px rgb(95, 164, 253);
+                ;
+              }
+            </style>
+          </div>
+          <div class="col-lg-6">
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="index.html#hero" class="active">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#founder">Founder</a></li>
+              </ul>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+          </div>
+          <div class="col-lg-1">
+            <a class="btn-getstarted" href="./Documentation.pdf" target="_blank">Documentation</a>
+          </div>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#pricing">Pricing</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="./Documentation.pdf" target="_blank">See Documentation</a>
-
+        </div>
+      </div>
     </div>
   </header>
 
@@ -523,6 +541,7 @@
 
     </section><!-- /More Features Section -->
 
+
     <!-- Pricing Section -->
     <section id="pricing" class="pricing section">
 
@@ -680,6 +699,94 @@
       </div>
 
     </section><!-- /Pricing Section -->
+
+
+    <!-- founder -->
+    <section id="founder" class="more-features section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Founder</h2>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="row justify-content-around gy-4">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up"
+            data-aos-delay="100">
+            <h3>Meat Muhamad Yazdan CEO , Founder & Lead Developer Of QuickSite Builder
+            </h3>
+            <p>QuickSite Builder was founded with a mission to empower small businesses and
+              entrepreneurs with affordable, flexible, and fast website creation tools. Our founder Muhammad Yazdan
+              has a passion for technology and innovation, and is dedicated to helping businesses thrive in the digital
+              age by offering a customizable solution that meets their unique needs.
+
+            </p>
+
+            <div class="row">
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-easel flex-shrink-0"></i>
+                <div>
+                  <h4>Vision:
+                  </h4>
+                  <p>Describes the broader goal of making website creation accessible to all.
+
+                  </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Mission:
+                  </h4>
+                  <p>To empower businesses and individuals by providing a fast, flexible, and affordable platform for
+                    creating professional websites.
+
+
+
+
+
+
+                  </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Inovations:
+                  </h4>
+                  <p>Focuses on the unique blend of speed and flexibility that QuickSite Builder offers.
+
+                  </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Commitment:
+                  </h4>
+                  <p>Highlights the dedication to simplifying web development for small businesses.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            
+
+            </div>
+
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="./me.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- founder -->
+
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
