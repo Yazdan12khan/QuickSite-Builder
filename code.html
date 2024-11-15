@@ -76,8 +76,24 @@
       <div class="col-md-6">
         <h3>Form Builder</h3>
         <div id="formContainer" class="droppable">
-          <p class="text-muted">Drag components here to build your form</p>
+          <form id="dynamicForm" class="container">
+            <div class="form-component">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name">
+              <button class="delete-btn">&times;</button>
+            </div>
+            <div class="form-component">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="delete-btn">&times;</button>
+            </div>
+            <div class="form-component">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button class="delete-btn">&times;</button>
+            </div>
+          </form>
         </div>
+        
       </div>
       
       <!-- Toolbox and Code Editor Section -->
@@ -296,6 +312,56 @@
       link.download = "form-source.html";
       link.click();
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  initializeDefaultForm();
+  attachDeleteEvents();
+  updateCodeEditor();
+});
+
+// Initialize the default form
+function initializeDefaultForm() {
+  const defaultFormHTML = `
+    <form id="dynamicForm" class="container">
+      <div class="form-component">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Enter your name">
+        <button class="delete-btn">&times;</button>
+      </div>
+      <div class="form-component">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="Enter your email">
+        <button class="delete-btn">&times;</button>
+      </div>
+      <div class="form-component">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="delete-btn">&times;</button>
+      </div>
+    </form>
+  `;
+  document.getElementById("formContainer").innerHTML = defaultFormHTML;
+}
+
+// Attach delete button events to all form components
+function attachDeleteEvents() {
+  document.querySelectorAll(".delete-btn").forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault(); // Prevent default action
+      e.target.closest(".form-component").remove(); // Remove the component
+      updateCodeEditor(); // Update the code editor
+    });
+  });
+}
+
+// Update the code editor with the current form's HTML
+function updateCodeEditor() {
+  const formContainer = document.getElementById("formContainer");
+  const formHTML = formContainer.innerHTML;
+  const cleanedHTML = formHTML.replace(/<button class="delete-btn">.*?<\/button>/g, ''); // Remove delete buttons from code
+  const code = `<form id="dynamicForm" class="container">${cleanedHTML}</form>`;
+  codeEditor.setValue(code); // Sync with CodeMirror
+}
+
   </script>
 </body>
 </html>
